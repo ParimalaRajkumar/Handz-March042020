@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/app_bg"
+    android:layout_height="match_parent"
+    >
+    <ImageView
+        android:id="@+id/tex1"
+        android:layout_width="120sp"
+        android:layout_height="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/handz"/>
+    <ImageView
+        android:id="@+id/top_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/top_banner_margin_top"
+        android:background="@color/profile_top_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".17"
+        app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+    <TextView
+        android:id="@+id/text1"
+        style="@style/ProfileNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/menu"
+        app:layout_constraintEnd_toStartOf="@+id/menu"
+        app:layout_constraintStart_toEndOf="@+id/profile_image"
+        app:layout_constraintTop_toTopOf="@+id/top_container" />
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="@dimen/profile_width"
+        android:layout_height="@dimen/profile_width"
+        android:layout_marginStart="@dimen/start_margin_left"
+        android:background="@drawable/image_border"
+        android:padding="4dp"
+        android:layout_marginBottom="@dimen/start_margin_left"
+        app:layout_constraintBottom_toBottomOf="@+id/top_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/default_profile" />
+
+    <ImageView
+        android:id="@+id/menu"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/top_container" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="@dimen/rating_icon_size"
+        android:layout_height="@dimen/rating_icon_size"
+        android:layout_marginStart="@dimen/start_margin_left"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:srcCompat="@drawable/ic_starrating"
+        app:layout_constraintBottom_toBottomOf="@+id/top_container"
+        app:layout_constraintStart_toEndOf="@+id/profile_image"
+        app:layout_constraintTop_toBottomOf="@+id/text1" />
+
+    <TextView
+        android:id="@+id/text2"
+        style="@style/RatingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Rating:"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+    <TextView
+        android:id="@+id/text3"
+        style="@style/Ratingvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="5.0"
+        app:layout_constraintBottom_toBottomOf="@+id/text2"
+        app:layout_constraintStart_toEndOf="@+id/text2"
+        app:layout_constraintTop_toTopOf="@+id/text2" />
+
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/ProfileTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="lend a hand"
+        app:layout_constraintBottom_toTopOf="@+id/find_job"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_container" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="@dimen/profile_icon_size"
+        android:layout_height="@dimen/profile_icon_size"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="@+id/need_help"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias=".47"
+        app:layout_constraintTop_toBottomOf="@+id/top_container" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintCircle="@+id/logo"
+        android:id="@+id/find_job"
+        app:layout_constraintCircleRadius="@dimen/circle_radius_top"
+        app:layout_constraintCircleAngle="335"
+        app:layout_constraintBottom_toTopOf="@+id/create_job_text">
+    <ImageView
+        android:layout_width="@dimen/profile_icon_size"
+        android:layout_height="@dimen/profile_icon_size"
+        android:layout_margin="@dimen/notification_count_margin"
+        android:clickable="false"
+        app:srcCompat="@drawable/ic_map_view_2"
+       />
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/create_job_text"
+        style="@style/ProfileIconText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="job map view"
+        app:layout_constraintLeft_toLeftOf="@id/find_job"
+        app:layout_constraintRight_toRightOf="@id/find_job"
+        app:layout_constraintTop_toBottomOf="@+id/find_job" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/list_view"
+        app:layout_constraintCircle="@+id/logo"
+        app:layout_constraintCircleRadius="@dimen/circle_radius_top"
+        app:layout_constraintCircleAngle="25">
+
+    <ImageView
+        android:layout_width="@dimen/profile_icon_size"
+        android:layout_height="@dimen/profile_icon_size"
+        android:layout_margin="@dimen/notification_count_margin"
+        android:clickable="false"
+        app:srcCompat="@drawable/ic_job_list_2"/>
+    </FrameLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  Job List View"
+        android:layout_centerInParent="true"
+        style="@style/ProfileIconText"
+        app:layout_constraintLeft_toLeftOf="@id/list_view"
+        app:layout_constraintRight_toRightOf="@id/list_view"
+        app:layout_constraintTop_toBottomOf="@+id/list_view"
+        />
+
+    <FrameLayout
+        android:id="@+id/active_job"
+        android:layout_width="wrap_content"
+        app:layout_constraintCircle="@+id/logo"
+        app:layout_constraintCircleRadius="@dimen/circle_radius"
+        app:layout_constraintCircleAngle="90"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="@dimen/profile_icon_size"
+            android:layout_height="@dimen/profile_icon_size"
+            android:layout_margin="@dimen/notification_count_margin"
+            app:srcCompat="@drawable/ic_active_jobs_2"
+            ></ImageView>
+
+        <TextView
+            android:id="@+id/txt_activejobscnt"
+            android:layout_width="@dimen/notification_icon_size"
+            android:layout_height="@dimen/notification_icon_size"
+            android:layout_gravity="top|right"
+            android:adjustViewBounds="true"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:visibility="invisible"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:scaleType="fitStart"
+            android:background="@drawable/circle_shape" />
+
+    </FrameLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="active jobs"
+        android:layout_centerInParent="true"
+        style="@style/ProfileIconText"
+        app:layout_constraintLeft_toLeftOf="@id/active_job"
+        app:layout_constraintRight_toRightOf="@id/active_job"
+        app:layout_constraintTop_toBottomOf="@+id/active_job"
+        />
+ <FrameLayout
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     app:layout_constraintCircle="@+id/logo"
+     android:id="@+id/edit_user_profile"
+     app:layout_constraintCircleRadius="@dimen/circle_radius_top"
+     app:layout_constraintCircleAngle="155">
+    <ImageView
+
+        android:layout_width="@dimen/profile_icon_size"
+        android:layout_height="@dimen/profile_icon_size"
+        android:layout_margin="@dimen/notification_count_margin"
+        android:clickable="false"
+        app:srcCompat="@drawable/ic_edit_user_2"
+        />
+ </FrameLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="    edit user \n      profile"
+        android:layout_centerInParent="true"
+        style="@style/ProfileIconText"
+        app:layout_constraintLeft_toLeftOf="@id/edit_user_profile"
+        app:layout_constraintRight_toRightOf="@id/edit_user_profile"
+        app:layout_constraintTop_toBottomOf="@+id/edit_user_profile"
+        />
+
+    <FrameLayout
+        android:id="@+id/job_history"
+        android:layout_width="wrap_content"
+        app:layout_constraintCircle="@+id/logo"
+        app:layout_constraintCircleRadius="@dimen/circle_radius_top"
+        app:layout_constraintCircleAngle="205"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="@dimen/profile_icon_size"
+            android:layout_height="@dimen/profile_icon_size"
+            android:layout_margin="@dimen/notification_count_margin"
+            app:srcCompat="@drawable/ic_job_history_1"
+            ></ImageView>
+
+        <TextView
+            android:id="@+id/job_historycnt"
+            android:layout_width="@dimen/notification_icon_size"
+            android:layout_height="@dimen/notification_icon_size"
+            android:layout_gravity="top|right"
+            android:adjustViewBounds="true"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:scaleType="fitStart"
+            android:background="@drawable/circle_shape" />
+
+    </FrameLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="job history"
+        android:layout_centerInParent="true"
+        style="@style/ProfileIconText"
+        app:layout_constraintLeft_toLeftOf="@id/job_history"
+        app:layout_constraintRight_toRightOf="@id/job_history"
+        app:layout_constraintTop_toBottomOf="@+id/job_history"
+        />
+    <FrameLayout
+        android:id="@+id/pending_job"
+        android:layout_width="wrap_content"
+        app:layout_constraintCircle="@+id/logo"
+        app:layout_constraintCircleRadius="@dimen/circle_radius"
+        app:layout_constraintCircleAngle="270"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="@dimen/profile_icon_size"
+            android:layout_height="@dimen/profile_icon_size"
+            android:layout_margin="@dimen/notification_count_margin"
+            app:srcCompat="@drawable/ic_posted_jobs_2"
+            ></ImageView>
+
+        <TextView
+            android:id="@+id/txt_postedjobcnt"
+            android:layout_width="@dimen/notification_icon_size"
+            android:layout_height="@dimen/notification_icon_size"
+            android:layout_gravity="top|right"
+            android:adjustViewBounds="true"
+            android:visibility="invisible"
+            android:textColor="#ffffff"
+            android:textSize="17sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:scaleType="fitStart"
+            android:background="@drawable/circle_shape" />
+
+    </FrameLayout>
+
+    <TextView
+        style="@style/ProfileIconText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="pending jobs"
+        app:layout_constraintLeft_toLeftOf="@id/pending_job"
+        app:layout_constraintRight_toRightOf="@id/pending_job"
+        app:layout_constraintTop_toBottomOf="@+id/pending_job" />
+
+    <RelativeLayout
+        android:id="@+id/tutorial_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="@dimen/profile_page_bottom_margin"
+        app:layout_constraintBottom_toTopOf="@id/tex1"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <ImageView
+            android:id="@+id/tutorial"
+            android:layout_width="@dimen/bottom_icon_size"
+            android:layout_height="@dimen/bottom_icon_height"
+            android:gravity="center"
+            android:src="@drawable/tutorial_image" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tutorial"
+            android:text="tutorial"
+            android:textAllCaps="true"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/tex1"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="@dimen/profile_page_bottom_margin"
+        android:layout_marginRight="16dp">
+
+        <ImageView
+            android:id="@+id/sha_lend"
+            android:layout_width="@dimen/bottom_icon_size"
+            android:layout_height="@dimen/bottom_icon_height"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:src="@drawable/share" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="share"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="12sp"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/sha_lend"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/need_help"
+        android:layout_width="@dimen/bottom_icon_size"
+        android:layout_height="@dimen/bottom_icon_size"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bulb"
+        app:layout_constraintBottom_toTopOf="@+id/tutorial_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:indeterminateDrawable="@drawable/progress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></ProgressBar>
+
+</android.support.constraint.ConstraintLayout>

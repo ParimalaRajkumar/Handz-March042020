@@ -1,0 +1,70 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="MyRatingBar" parent="Widget.AppCompat.RatingBar">
+        <item name="colorAccent">#f9a825</item>
+        <item name="android:colorControlNormal" tools:ignore="NewApi">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+    </style>
+
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+    </style>
+
+    <style name="CustomRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/custom_ratingbar</item>
+        <item name="android:minHeight">45dip</item>
+        <item name="android:maxHeight">45dip</item>
+    </style>
+    <style name="RatingText" >
+        <item name="android:textColor">@color/rating_text_color</item>
+        <item name="android:fontFamily">LibreFranklin-SemiBoldItalic</item>
+        <item name="android:textSize">@dimen/rating_text_size</item>
+    </style>
+    <style name="Ratingvalue" >
+        <item name="android:textColor">@color/rating_text_color</item>
+        <item name="android:fontFamily">@fonts/LibreFranklin-SemiBoldItalic</item>
+        <item name="android:textSize">@dimen/rating_text_size</item>
+    </style>
+    <style name="ProfileIconText">
+        <item name="android:textColor">@color/profile_icon_text</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">@dimen/profile_icon_text</item>
+    </style>
+    <style name="ProfileNameText">
+    <item name="android:textColor">@color/rating_text_color</item>
+        <item name="android:fontFamily">@fonts/cambriai_0</item>
+        <item name="android:textSize">@dimen/rating_text_size</item>
+</style>
+    <style name="ChatitemTime">
+        <item name="android:textColor">@color/chatitem_time</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:layout_marginTop">3dp</item>
+    </style>
+    <style name="ProfileTitleText">
+        <item name="android:textColor">@color/profile_title_color</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textSize">35dp</item>
+    </style>
+</resources>
+
